@@ -1,0 +1,88 @@
+/* styles.module.css */
+
+/* Variáveis de cor */
+:root {
+  --clrPrimary: #d50000;
+  --clrPrimaryHover: #29e6a7;
+  --clrPrimaryDark: #039d69;
+  --clrGray100: #f9fbff;
+  --clrGray150: #f4f6fb;
+  --clrGray200: #eef1f6;
+  --clrGray300: #e1e5ee;
+  --clrGray400: #767b91;
+  --clrGray500: #4f546c;
+  --clrGray600: #2a324b;
+  --clrGray700: #161d34;
+}
+
+/* Raio da borda */
+:root {
+  --radius: 0.2rem;
+}
+
+/* Resetando o box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout em grade */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 3rem;
+  justify-content: center;
+  margin: 1rem;
+}
+
+/* Estilo do cartão */
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px var(--clrGray300);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  background-color: #F2B90F;
+
+  .card__image {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card__title {
+    padding: 1rem;
+  }
+
+  .card__description {
+    padding: 0 1rem;
+  }
+
+  .card__btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #F28705;
+    background: #F28705;
+    color: white;
+    border-radius: var(--radius);
+    transition: background 200ms ease-in, color 200ms ease-in;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+
+    .card__btn {
+      background: #F28705;
+      color: white;
+    }
+  }
+}
