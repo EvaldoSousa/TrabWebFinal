@@ -14,7 +14,7 @@
   color: aliceblue;
 }
 
-form {
+.hero form {
   display: flex;
   justify-content: space-between;
   align-items: center;

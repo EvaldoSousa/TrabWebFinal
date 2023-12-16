@@ -1,0 +1,93 @@
+/* Estilos para telas grandes */
+.caixaLogin {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.titulo {
+    width: 100%;
+    padding: 20px ;
+    text-align: center;
+}
+
+.barraLogin {
+   
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    border-radius: 20%;
+    background-color: #72aefc;
+    border: #fff2d5 5px solid;
+}
+
+.nome,
+.Email,
+.senha {
+    margin-bottom: 10px;
+    color: #fff2d5;
+}
+
+.botaoL {
+    background-color: #ffae00; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    margin: 2%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.irLogin {
+    margin-top: 10px;
+    color: #ffbb00; /* Cor do texto do link */
+    text-decoration: none;
+}
+
+/* Estilos para telas médias a pequenas usando media query */
+@media screen and (max-width: 768px) {
+.caixaLogin {
+    flex-direction: column;
+}
+
+.barraLogin {
+    background-color: #72aefc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  30px;
+   
+}
+
+
+.barraLogin {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20%;
+    border: #fff2d5 5px solid;
+}
+
+.titulo {
+    
+    height:80px;
+    width: 200px; /* Ajuste conforme necessário */
+    
+}
+
+.botaoL{
+    margin: 10%;
+}
+}
