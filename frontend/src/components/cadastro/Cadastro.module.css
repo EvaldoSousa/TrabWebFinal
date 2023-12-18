@@ -11,6 +11,7 @@
     width: 100%;
     padding: 20px ;
     text-align: center;
+    color: #fff;
 }
 
 .barraLogin {
@@ -34,7 +35,7 @@
 .Email,
 .senha {
     margin-bottom: 10px;
-    color: #fff2d5;
+    color: #fff;
 }
 
 .botaoL {

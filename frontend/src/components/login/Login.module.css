@@ -1,0 +1,96 @@
+/* Estilos para telas grandes */
+.driver {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.barraLogin {
+    padding: 20px;
+    width: 80%;
+    background-color: #72aefc;
+    border-radius: 20px;
+    border: #fff2d5 5px solid;
+}
+
+.nome,
+.Email,
+.senha {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.pesquisa {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.botaoL {
+    background-color: #ffae00;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.irLogin {
+    margin-top: 10px;
+    color: #ffbb00;
+    text-decoration: none;
+}
+
+/* Estilos para telas médias a pequenas usando media query */
+@media screen and (max-width: 768px) {
+    .driver {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .barraLogin {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: #fff2d5 5px solid;
+    }
+
+    .titulo {
+        height: 80px;
+        width: 100%;
+    }
+
+    .botaoL {
+        margin: 10% 0;
+    }
+}

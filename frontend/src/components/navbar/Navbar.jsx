@@ -1,29 +1,27 @@
 import { React, useState } from 'react';
 import styles from './Navbar.module.css';
 import Logo from '../../images/logo.png';
-import {
-  AiOutlineUser,
-  AiOutlineSearch,
-  AiOutlineMenu,
-  AiOutlineClose,
-} from 'react-icons/ai';
+import {AiOutlineUser, AiOutlineSearch, AiOutlineMenu, AiOutlineClose,} from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
     <header className={styles.navbar}>
+      <Link to={'/'}>
       <img src={Logo} alt='Logo' />
+      </Link>
       <nav>
         <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]} >
           <li>
             <a href='/#'>Saiba Mais</a>
           </li>
           <li>
-            <a href='/#'>Login</a>
+            <a href='/telaLogin'>Login</a>
           </li>
           <li>
-            <a href='/#'>Cadastrar</a>
+            <a href='/telaCadastro'>Cadastrar</a>
           </li>
           <li>
             <AiOutlineSearch size={25} style={{ marginTop: '6px' }} />

@@ -14,6 +14,7 @@ import RedeHumanitaria from "./pages/redeHumanitaria";
 import SemeandoBondade from "./pages/semeandoBondade";
 import TelaCadastro from "./pages/cadastro";
 import TelaLogin from "./pages/login";
+import TelaPerfil from "./pages/perfil";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/semeandoBondade" element={<SemeandoBondade/>}/>
         <Route path="/telaCadastro" element={<TelaCadastro/>}/>
         <Route path="/telaLogin" element={<TelaLogin/>}/>
+        <Route path="/telaPerfil" element={<TelaPerfil/>}/>
       </Routes>
     </Router>
   )

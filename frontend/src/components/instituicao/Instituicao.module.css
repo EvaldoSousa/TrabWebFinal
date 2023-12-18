@@ -1,0 +1,50 @@
+/* Instituicao.module.css */
+
+.container {
+    margin: 10%;
+}
+
+.tituLogo{
+    display: flex;
+    margin: 5%;
+}
+.header {
+    /* Ajustes para o título e a logo */
+    margin-bottom: 20px; /* Ajusta a margem entre o título e a logo */
+}
+  
+.logo {
+    margin-left: 20px; /* Ajusta a margem entre o título e a logo */
+}
+
+.logoContainer {
+    margin-bottom: 20px;
+}
+  
+.paragrafo {
+    flex-direction: column;
+    display: grid;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    grid-gap: 20px; /* Espaço entre os parágrafos */
+    text-align: left;
+}
+  
+.paragrafo h2 {
+    margin-bottom: 10px; /* Espaço entre os títulos e os parágrafos */
+}
+
+button {
+    background: none;
+    background-color: orange;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 100px 80%;
+    padding: 12px 18px;
+    border: 5px solid whitesmoke;
+    border-radius: 20%;
+    display: block; /* Torna o botão um elemento de bloco */
+    margin-left: 10px; /* Ajusta a margem à esquerda conforme necessário */
+}
+
