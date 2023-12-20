@@ -94,6 +94,29 @@ app.post('/login', async (req, res) => {
     }
 });
 
+app.delete('/deleteAccount/:userId', async (req, res) => {
+    const userId = req.params.userId;
+
+    try {
+        // Verifica se o usuário existe
+        const checkUserQuery = 'SELECT * FROM usuario WHERE id = ?';
+        const user = await queryAsync(checkUserQuery, [userId]);
+
+        if (user.length === 0) {
+            return res.status(404).json({ error: 'Usuário não encontrado' });
+        }
+
+        // Se o usuário existe, proceda com a exclusão
+        const deleteAccountQuery = 'DELETE FROM usuario WHERE id = ?';
+        await queryAsync(deleteAccountQuery, [userId]);
+
+        res.json({ message: 'Conta excluída com sucesso' });
+    } catch (error) {
+        console.error('Erro ao excluir conta:', error);
+        res.status(500).json({ error: 'Erro ao excluir conta' });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
