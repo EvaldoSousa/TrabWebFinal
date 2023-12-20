@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import Hero from '../components/hero/Hero'
 import Find from '../components/find/Find'
-import Driver from '../components/driver/Driver'
+import Flor from '../components/flor/Flor'
 import Footer from '../components/footer/Footer'
 
 function Principal() {
@@ -11,7 +11,7 @@ function Principal() {
       <Navbar />
       <Hero />
       <Find />
-      <Driver />
+      <Flor />
       <Footer />
     </div>
   );

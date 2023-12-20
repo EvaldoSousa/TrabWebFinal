@@ -1,4 +1,4 @@
-.driver {
+.flor {
     max-width: 1040px;
     margin: auto;
     padding:  1rem;
@@ -7,26 +7,26 @@
     gap: 3rem;
 }
 
-.driver img {
+.flor img {
     max-width: 512px;
 }
 
 
-.driver h2 {
+.flor h2 {
     padding-top: 30%;
 }
 
-.driver span {
+.flor span {
     color: rgb(255, 230, 0);
 }
 
-.driver p {
+.flor p {
     font-size: 1rem;
     color: #333;
     padding: 1.5rem 0;
 }
 
-.driver button {
+.flor button {
     background-color: orange;
     color: #fff;
     font-weight: 600;
@@ -37,27 +37,27 @@
     border-radius: 20%;
 }
 
-.driver button:hover {
+.flor button:hover {
     background-color: rgb(235, 154, 5);
     transition: background-color 0.5s;
 }
 
 @media screen and (max-width: 920px) {
-    .driver {
+    .flor {
         grid-template-columns: 1fr;
     }
 
-    .driver img {
+    .flor img {
         max-width: 80%;
         margin: auto;
     }
 
-    .driver .left {
+    .flor .left {
         display: flex;
         justify-content: center;
     }
 
-    .driver h2 {
+    .flor h2 {
         padding-top: 10%;
     }
 }

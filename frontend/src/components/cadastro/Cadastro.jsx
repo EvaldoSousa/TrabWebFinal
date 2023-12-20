@@ -1,71 +1,63 @@
 import React, { useState } from 'react';
-import styles from './Cadastro.module.css'
-import { Link } from 'react-router-dom';
-import Logo from '../../images/logo.png';
+import axios from 'axios'; // Importa a biblioteca axios
+
+const Cadastro = () => {
+  const [nomeUsuario, setUsuario] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
 
-// const Cadastro = () => {
+  const handleCadastro = async (event) => {
+    event.preventDefault();
 
+    try {
+      // Faz a chamada à API usando axios
+      await axios.post('http://localhost:3001/signup', { nomeUsuario, email, senha });
+      alert('Usuário cadastrado com sucesso!');
+      window.location.href = "/telaLogin";
+      // Redireciona o usuário para a página de login ou outra página apropriada
+    } catch (error) {
+      console.error('Erro no cadastro:', error);
+      // Trate os erros, por exemplo, exibindo uma mensagem de erro para o usuário
+      alert('Erro ao cadastrar usuário. Por favor, tente novamente.');
+    }
+  };
 
-//   return (
-//     <div className={styles.caixaLogin}>
+  return (
+    <div>
+      <h2>Cadastro</h2>
+      <form onSubmit={handleCadastro}>
+        <label>Usuario</label>
+        <input
+          type="text"
+          value={nomeUsuario}
+          onChange={(e) => setUsuario(e.target.value)}
+          placeholder="usuario"
+          required
+        />
 
-//       <form className={styles.barraLogin} onSubmit={handleCadastro}>
-//       <div className={styles.titulo}>
-//       <img src={Logo} alt='Logo' />
-//         <h3>Cadastro</h3>
-//       </div>
-// 	        <label className={styles.nome}>
-//           <h4>Usuario</h4>
-//         </label>
-//         <div className={styles.barraNome}>
-//           <input
-//             className={`${styles.pesquisa} ${styles.pesquisa1}`}
-//             type="text"
-//             value={usuario}
-//             onChange={(e) => setUsuario(e.target.value)}
-//             placeholder="usuario"
-//             required
-//           />
-//         </div>
-//         <label className={styles.Email}>
-//           <h4>email</h4>
-//         </label>
-//         <div className={styles.barraEmail}>
-//           <input
-//             className={`${styles.pesquisa} ${styles.pesquisa1}`}
-//             type="email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//             placeholder="email"
-//             required
-//           />
-//         </div>
-//         <label className={styles.senha}>
-//           <h4>Senha</h4>
-//         </label>
-//         <div className={styles.barraSenha}>
-//           <input
-//             className={`${styles.pesquisa} ${styles.pesquisa1}`}
-//             type="password"
-//             value={senha}
-//             onChange={(e) => setSenha(e.target.value)}
-//             placeholder="senha"
-//             required
-//           />
-//         </div>
-//         <button className={`${styles.botaoL} ${styles.botaoL1}`} type="submit">
-//           Cadastrar
-//         </button>
-//         <Link to="telaLogin" className={styles.irLogin}>
-//           <h6>ir para login</h6>
-//         </Link>
-//       </form>
-      
-//     </div>
-//   );
-  
-  
-// }
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="email"
+          required
+        />
 
-// export default Cadastro;
+        <label>Senha</label>
+        <input
+          type="password"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          placeholder="senha"
+          required
+        />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  );
+};
+
+export default Cadastro;

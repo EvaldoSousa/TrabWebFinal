@@ -1,12 +1,12 @@
-// import React from 'react'
-// import Cadastro from '../components/cadastro/Cadastro';
+ import React from 'react'
+ import Cadastro from '../components/cadastro/Cadastro';
 
-// function TelaCadastro() {
-//   return (
-//     <div>
-//         <Cadastro/>
-//     </div>
-//   );
-// }
+ function TelaCadastro() {
+   return (
+     <div>
+         <Cadastro/>
+     </div>
+   );
+ }
 
-// export default TelaCadastro;
+ export default TelaCadastro;

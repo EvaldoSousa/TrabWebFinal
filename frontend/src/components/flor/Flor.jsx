@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './Driver.module.css';
+import styles from './Flor.module.css';
 import Drive from '../../images/Component 4flor.png'
 import { Link } from 'react-router-dom';
 
-const Driver = () => {
+const Flor = () => {
   return (
-    <div className={styles.driver}>
+    <div className={styles.flor}>
         <div className={styles.left}>
             <img src={Drive} alt="/" />
         </div>
@@ -19,4 +19,4 @@ const Driver = () => {
   )
 }
 
-export default Driver
+export default Flor
