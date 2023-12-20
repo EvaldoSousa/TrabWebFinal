@@ -28,29 +28,33 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label>Usuario/email</label>
-        <input
-          type="email"
-          value={usuarioEmail}
-          onChange={(e) => setUsuarioEmail(e.target.value)}
-          placeholder="email"
-          required
-        />
+      <div className={styles.driver}>
+        <div className={styles.left}>
+          <form onSubmit={handleLogin} className={styles.barraLogin}>
+            <h1>Login</h1>
+                <label className={styles.nome}>Usuario/email</label>
+                <input
+                    type="email"
+                    value={usuarioEmail}
+                    onChange={(e) => setUsuarioEmail(e.target.value)}
+                    placeholder="email"
+                    required
+                />
 
-        <label>Senha</label>
-        <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          placeholder="senha"
-          required
-        />
+                <label className={styles.senha}>Senha</label>
+                <input
+                    type="password"
+                    value={senha}
+                    onChange={(e) => setSenha(e.target.value)}
+                    placeholder="senha"
+                    required
+                />
 
-        <button type="submit">Entrar</button>
-      </form>
+                <button type="submit" className={styles.botaoL}>
+                    Entrar
+                </button>
+            </form>
+        </div>
     </div>
   );
 };

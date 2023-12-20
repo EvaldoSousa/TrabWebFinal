@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Importa a biblioteca axios
+import styles from './Cadastro.module.css'
 
 const Cadastro = () => {
   const [nomeUsuario, setUsuario] = useState('');
@@ -24,39 +25,41 @@ const Cadastro = () => {
   };
 
   return (
-    <div>
-      <h2>Cadastro</h2>
-      <form onSubmit={handleCadastro}>
-        <label>Usuario</label>
+    <div className={styles.caixaLogin}>
+    <form onSubmit={handleCadastro} className={styles.barraLogin}>
+    <h2 className={styles.titulo}>Cadastro</h2>
+        <label className={styles.nome}>Usuario</label>
         <input
-          type="text"
-          value={nomeUsuario}
-          onChange={(e) => setUsuario(e.target.value)}
-          placeholder="usuario"
-          required
+            type="text"
+            value={nomeUsuario}
+            onChange={(e) => setUsuario(e.target.value)}
+            placeholder="usuario"
+            required
         />
 
-        <label>Email</label>
+        <label className={styles.Email}>Email</label>
         <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="email"
-          required
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="email"
+            required
         />
 
-        <label>Senha</label>
+        <label className={styles.senha}>Senha</label>
         <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          placeholder="senha"
-          required
+            type="password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            placeholder="senha"
+            required
         />
 
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
+        <button type="submit" className={styles.botaoL}>
+            Cadastrar
+        </button>
+    </form>
+</div>
   );
 };
 

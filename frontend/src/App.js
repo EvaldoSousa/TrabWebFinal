@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import Principal from "./pages/principal";
+import PrincipalNaoLog from "./pages/principalNaoLog";
 import Instituicoes from "./pages/instituicoes";
 import AcolherTransformar from "./pages/acolherTransformar";
 import AliancaMudanca from "./pages/aliancaMudanca";
@@ -17,11 +18,13 @@ import TelaLogin from "./pages/login";
 import TelaPerfil from "./pages/perfil";
 
 
+
 function App() {
   return(
     <Router>
       <Routes>
         <Route path="/" element={<Principal/>}/>
+        <Route path="/naoLog" element={<PrincipalNaoLog/>}/>
         <Route path="/instituicoes" element={<Instituicoes/>}/>
         <Route path="/acolherTransformar" element={<AcolherTransformar/>}/>
         <Route path="/aliancaMudanca" element={<AliancaMudanca/>}/>

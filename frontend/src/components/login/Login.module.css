@@ -1,3 +1,5 @@
+/* Login.module.css */
+
 /* Estilos para telas grandes */
 .driver {
     display: flex;
@@ -12,58 +14,48 @@
     justify-content: center;
 }
 
-.left img {
-    max-width: 100%;
-    height: auto;
-}
-
-.right {
+.barraLogin {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.right h1 {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.barraLogin {
-    padding: 20px;
-    width: 80%;
+    padding: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    border-radius: 20%;
     background-color: #72aefc;
-    border-radius: 20px;
     border: #fff2d5 5px solid;
 }
 
 .nome,
-.Email,
 .senha {
     margin-bottom: 10px;
     color: #fff;
 }
 
-.pesquisa {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
 .botaoL {
-    background-color: #ffae00;
-    color: #fff;
-    margin-top: 20px;
+    background-color: #ffae00; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    margin: 2%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.titulo {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
 .irLogin {
     margin-top: 10px;
-    color: #ffbb00;
+    color: #ffbb00; /* Cor do texto do link */
     text-decoration: none;
 }
 
@@ -73,24 +65,28 @@
         flex-direction: column;
     }
 
-    .left,
-    .right {
-        width: 100%;
-    }
-
     .barraLogin {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-radius: 20px;
+        background-color: #72aefc;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 20%;
         border: #fff2d5 5px solid;
     }
 
     .titulo {
         height: 80px;
-        width: 100%;
+        width: 200px; /* Ajuste conforme necessário */
     }
 
     .botaoL {
-        margin: 10% 0;
+        margin: 10%;
     }
 }

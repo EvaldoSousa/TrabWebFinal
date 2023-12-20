@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
 import styles from './Navbar.module.css';
 import Logo from '../../images/logo.png';
-import {AiOutlineUser, AiOutlineSearch, AiOutlineMenu, AiOutlineClose,} from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose,} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const NavbarNaoLog = () => {
   const [nav, setNav] = useState(false);
 
   return (
@@ -18,13 +18,15 @@ const Navbar = () => {
             <a href='/#'>Saiba Mais</a>
           </li>
           <li>
-            <AiOutlineSearch size={25} style={{ marginTop: '6px' }} />
+            <a href='/telaLogin'>Login</a>
           </li>
           <li>
-           <Link to="/telaPerfil">
-            <AiOutlineUser size={25} style={{ marginTop: '6px' }} />
-          </Link>
+            <a href='/telaCadastro'>Cadastrar</a>
           </li>
+          <li>
+            <AiOutlineSearch size={25} style={{ marginTop: '6px' }} />
+          </li>
+          
         </ul>
       </nav>
       <div onClick={()=> setNav(!nav)} className={styles.mobile_btn}>
@@ -35,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarNaoLog;
